@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.shapes {
+  width: 200px;
+  height: 200px;
+  color: #f03355;
+  background: teal;
+  /* background: conic-gradient(currentColor 8 278deg,#0000 0); */
+  border-radius: 50%;
+  animation: sp4-0 4s infinite linear;
+}
+
+.shapes::before {
+  content: "";
+  display: block;
+  height: 50%;
+  width: 50%;
+  border-top-left-radius: 100px;
+  background-color: currentColor;
+  animation: sp4 0.5s infinite alternate;
+}
+
+@keyframes sp4-0 {
+  0%,
+  24.99% {
+    transform: rotate(0deg);
+  }
+  25%,
+  49.99% {
+    transform: rotate(90deg);
+  }
+  50%,
+  74.99% {
+    transform: rotate(180deg);
+  }
+  75%,
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes sp4 {
+   100% {
+    transform: translate(-10px, -10px);
+   }
+}
